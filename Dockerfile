@@ -1,6 +1,9 @@
 # Use the official PHP image with Apache
 FROM php:7.4-apache
 
+# Copy custom Apache config
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     libpng-dev \
