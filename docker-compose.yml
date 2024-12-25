@@ -14,10 +14,10 @@ services:
     image: mysql:5.7
     platform: linux/amd64
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE} # Name of the database
-      MYSQL_USER: ${DB_USERNAME} # Non-root user
-      MYSQL_PASSWORD: ${DB_PASSWORD} # Password for non-root user
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD} # Root password
+      MYSQL_DATABASE: laravel # Name of the database
+      MYSQL_USER: user # Non-root user
+      MYSQL_PASSWORD: root # Password for non-root user
+      MYSQL_ROOT_PASSWORD: root # Root password
     ports:
       - "3306:3306"
     volumes:
